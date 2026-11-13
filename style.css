@@ -1,0 +1,495 @@
+root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #1d2432;
+  --muted: #64748b;
+  --primary: #e63946;     /* Österreich Rot */
+  --primary-dark: #c1121f;
+  --green: #16a34a;
+  --green-bg: #dcfce7;
+  --yellow: #f59e0b;
+  --yellow-bg: #fef3c7;
+  --blue: #2563eb;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 16px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.rank-badge, .xp-badge {
+  background: var(--card);
+  padding: 8px 14px;
+  border-radius: 99px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.badge-level {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  background: #fee2e2;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+select {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Progress Bar */
+.progress-wrapper {
+  margin-bottom: 16px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  width: 100%;
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #15803d;
+  transition: transform 0.1s;
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #15803d;
+}
+
+/* 4-Slot Grid */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.slot-box {
+  padding: 10px 4px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+}
+
+.slot-num {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.slot-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.slot-2 { border-color: #93c5fd; background: #eff6ff; }
+.slot-3 { border-color: #fde047; background: #fefce8; }
+.slot-4 { border-color: #86efac; background: #f0fdf4; }
+
+/* Race Mode Buttons */
+.mode-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.mode-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.mode-info span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.mode-status {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #e2e8f0;
+}
+
+/* Game Screen */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-icon {
+  background: var(--card);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sprint-counter {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.points-pill {
+  background: var(--blue);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+/* Pacemaker Bar */
+.pacemaker-container {
+  background: var(--card);
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.pacemaker-track {
+  position: relative;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  margin: 6px 0 8px;
+}
+
+.pacemaker-bar {
+  height: 100%;
+  width: 100%;
+  background: var(--green);
+  border-radius: 99px;
+  transition: width 0.5s linear, background-color 0.3s;
+}
+
+.pacemaker-bike {
+  position: absolute;
+  top: -12px;
+  left: 0%;
+  font-size: 1.3rem;
+  transition: left 0.5s linear;
+}
+
+.pacemaker-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* Question Card */
+.question-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.visual-anchor {
+  font-size: 2.3rem;
+  text-align: center;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  letter-spacing: 4px;
+}
+
+.btn-hint {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: #eff6ff;
+  border: 1px dashed var(--blue);
+  color: var(--blue);
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.question-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.btn-audio-big {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background: #eff6ff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.question-text {
+  font-size: 1.18rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+/* Clickable English Keywords */
+.kw-tag {
+  background: var(--yellow-bg);
+  border-bottom: 2px solid var(--yellow);
+  padding: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.signal-bold {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+
+.keyword-popup {
+  margin-top: 10px;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Answer Options */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-tile {
+  display: flex;
+  align-items: stretch;
+  background: var(--card);
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.15s;
+}
+
+.option-audio {
+  width: 52px;
+  background: #f1f5f9;
+  border: none;
+  border-right: 1px solid #e2e8f0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.option-select {
+  flex: 1;
+  padding: 16px 14px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.option-tile.correct {
+  border-color: var(--green);
+  background: var(--green-bg);
+}
+
+.option-tile.wrong-muted {
+  opacity: 0.45;
+  background: #f1f5f9;
+}
+
+.option-tile.selected-exam {
+  border-color: var(--blue);
+  background: #eff6ff;
+}
+
+/* Coach Feedback Drawer */
+.feedback-drawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 -6px 24px rgba(0,0,0,0.15);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+}
+
+.feedback-content {
+  width: 100%;
+  max-width: 440px;
+}
+
+.feedback-drawer.is-correct {
+  background: var(--green-bg);
+  border-top: 4px solid var(--green);
+}
+
+.feedback-drawer.is-coach {
+  background: var(--yellow-bg);
+  border-top: 4px solid var(--yellow);
+}
+
+.feedback-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.feedback-content p {
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* Summary */
+.summary-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.trophy-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.summary-stats {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 12px;
+  margin: 16px 0;
+  text-align: left;
+  line-height: 1.6;
+  font-weight: 600;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Tour d'Autriche – ÖIF A2 Prep</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- SCREEN 1: DASHBOARD -->
+    <section id="screen-dashboard" class="screen active">
+      <header class="top-bar">
+        <div class="rank-badge">🏆 <span id="user-rank">Rookie</span></div>
+        <div class="xp-badge">⚡ <span id="user-xp">0</span> XP</div>
+      </header>
+
+      <div class="card stage-card">
+        <div class="stage-header">
+          <span class="badge-level">LEVEL 1 · TRAINING CAMP</span>
+          <select id="stage-select" aria-label="Etappe wählen"></select>
+        </div>
+        <h1 id="stage-title">🇦🇹 Allgemeines Orientierungswissen</h1>
+        
+        <div class="progress-wrapper">
+          <div class="progress-labels">
+            <span>Daily Stage Goal (Slot 2+)</span>
+            <span id="stage-progress-text">0 / 18 Cards</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="stage-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <button id="btn-start-sprint" class="btn-primary">
+          ▶ START 8-CARD SPRINT (90s/Card)
+        </button>
+      </div>
+
+      <div class="card slots-card">
+        <h2>4-Gear Card Slots (This Stage)</h2>
+        <div class="slots-grid">
+          <div class="slot-box slot-1">
+            <span class="slot-num" id="slot-count-1">0</span>
+            <span class="slot-label">1: Warm-Up</span>
+          </div>
+          <div class="slot-box slot-2">
+            <span class="slot-num" id="slot-count-2">0</span>
+            <span class="slot-label">2: Tempo</span>
+          </div>
+          <div class="slot-box slot-3">
+            <span class="slot-num" id="slot-count-3">0</span>
+            <span class="slot-label">3: Breakaway</span>
+          </div>
+          <div class="slot-box slot-4">
+            <span class="slot-num" id="slot-count-4">0</span>
+            <span class="slot-label">4: Mastered</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card modes-card">
+        <h2>Mixed Race Modes (All Stages)</h2>
+        <button id="btn-mode-2" class="mode-btn">
+          <div class="mode-info">
+            <strong>⏱️ Level 2: Time Trial (90s)</strong>
+            <span>Mixed topics · No English · Hint on tap</span>
+          </div>
+          <span class="mode-status" id="status-mode-2">READY</span>
+        </button>
+        <button id="btn-mode-3" class="mode-btn">
+          <div class="mode-info">
+            <strong>⚡ Level 3: Cadence Sprint (60s)</strong>
+            <span>Mixed · Text + Bold Signals · 2/3 Pts</span>
+          </div>
+          <span class="mode-status" id="status-mode-3">READY</span>
+        </button>
+        <button id="btn-mode-4" class="mode-btn">
+          <div class="mode-info">
+            <strong>🌈 Level 4: World Championship</strong>
+            <span>Real ÖIF Exam · 18 Qs · 40 Min · 25+ Pts</span>
+          </div>
+          <span class="mode-status" id="status-mode-4">EXAM</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: SPRINT / RACE SCREEN -->
+    <section id="screen-game" class="screen">
+      <header class="game-header">
+        <button id="btn-quit" class="btn-icon" aria-label="Zurück">✕</button>
+        <div class="sprint-counter" id="game-progress">Sprint: 1 / 8</div>
+        <div class="points-pill" id="game-points-pill" style="display: none;">2 PTS</div>
+      </header>
+
+      <!-- Pacemaker Progress Bar -->
+      <div class="pacemaker-container">
+        <div class="pacemaker-track">
+          <div id="pacemaker-bar" class="pacemaker-bar"></div>
+          <div id="pacemaker-bike" class="pacemaker-bike">🚴‍♂️</div>
+        </div>
+        <div class="pacemaker-meta">
+          <span id="pacemaker-label">Pacemaker: 90s</span>
+          <span id="pacemaker-timer">01:30</span>
+        </div>
+      </div>
+
+      <!-- Visual Anchor & Question Card -->
+      <div class="question-card">
+        <div id="visual-anchor" class="visual-anchor">👑❌ ➔ 🗳️🇦🇹</div>
+        <button id="btn-show-hint" class="btn-hint" style="display: none;">📷 Show Coach Visual Hint</button>
+        
+        <div class="question-row">
+          <button id="btn-audio-q" class="btn-audio-big" aria-label="Frage vorlesen">🔊</button>
+          <p id="question-text" class="question-text"></p>
+        </div>
+
+        <!-- English Keyword Tooltip -->
+        <div id="keyword-popup" class="keyword-popup hidden"></div>
+      </div>
+
+      <!-- Answer Options -->
+      <div id="options-container" class="options-container"></div>
+    </section>
+
+    <!-- SCREEN 3: COACH FEEDBACK OVERLAY -->
+    <div id="feedback-drawer" class="feedback-drawer hidden">
+      <div class="feedback-content">
+        <h3 id="feedback-title">🎉 AWESOME PACE!</h3>
+        <p id="feedback-message">+15 XP · Card streak: 1/3</p>
+        <button id="btn-next-card" class="btn-primary">NEXT CARD ➔</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 4: SPRINT / EXAM SUMMARY -->
+    <section id="screen-summary" class="screen">
+      <div class="card summary-card">
+        <div class="trophy-icon" id="summary-icon">🏆</div>
+        <h1 id="summary-title">SPRINT COMPLETE!</h1>
+        <p id="summary-subtitle">Great rhythm on the Austrian roads!</p>
+        <div class="summary-stats" id="summary-stats"></div>
+        <button id="btn-back-dashboard" class="btn-primary">BACK TO TOUR DASHBOARD</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
