@@ -2833,5 +2833,990 @@ keywords: { "Straßenbahn": "Tram / streetcar", "Platz anbieten": "offer a seat"
 signal_words: ["Straßenbahn", "Platz", "höflich"],
 coach_tip_en: "True! Offering your seat to parents with small children, pregnant women, or elderly people is good manners."
 }
+},
+// ==========================================
+  // STAGE 6: RECHTLICHE INTEGRATION
+  // ==========================================
+  {
+    id: "law_1",
+    category_id: "law",
+    base_question_id: "law_1",
+    points: 2,
+    official_text: {
+      question: "In Österreich haben alle Menschen das Recht auf Sicherheit.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🛡️🇦🇹 Recht auf Sicherheit",
+      short_question: "In Österreich haben {alle Menschen} das {Recht auf Sicherheit}.",
+      keywords: { "alle Menschen": "all people", "Recht auf Sicherheit": "right to safety / security" },
+      signal_words: ["alle Menschen", "Recht auf Sicherheit"],
+      coach_tip_en: "True! Every person in Austria has the fundamental right to safety and protection."
+    }
+  },
+  {
+    id: "law_2",
+    category_id: "law",
+    base_question_id: "law_2",
+    points: 2,
+    official_text: {
+      question: "Die Gesetze gelten in Österreich auch für die Polizei. Die Polizei ist in Österreich keine Gefahr für die Menschen.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🚓⚖️ Gesetze gelten für alle",
+      short_question: "Die {Gesetze} gelten {auch für die Polizei}.",
+      keywords: { "Gesetze": "Laws", "auch für die Polizei": "also for the police" },
+      signal_words: ["Gesetze", "auch für die Polizei"],
+      coach_tip_en: "Rule of law (Rechtsstaat): Nobody is above the law—including the police!"
+    }
+  },
+  {
+    id: "law_3",
+    category_id: "law",
+    base_question_id: "law_3",
+    points: 2,
+    official_text: {
+      question: "Die Polizei will Informationen von einer Person. Die Polizei darf dieser Person wehtun, damit sie diese Informationen bekommt.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🚓🚫👊 Folterverbot",
+      short_question: "Darf die Polizei einer Person {wehtun}, um Informationen zu bekommen?",
+      keywords: { "wehtun": "hurt / inflict pain" },
+      signal_words: ["Polizei", "wehtun"],
+      coach_tip_en: "False! Torture and physical violence by police are strictly forbidden (Folterverbot)."
+    }
+  },
+  {
+    id: "law_4",
+    category_id: "law",
+    base_question_id: "law_4",
+    points: 3,
+    official_text: {
+      question: "Ein Mann macht das Auto einer anderen Person kaputt. Was darf man jetzt tun?",
+      options: [
+        { id: "a", text: "Zur Polizei gehen." },
+        { id: "b", text: "Dem anderen Mann wehtun." },
+        { id: "c", text: "Das Auto des anderen Mannes auch kaputt machen." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🚗💥 ➔ 🚓 Polizei",
+      short_question: "Jemand macht ein {Auto kaputt}. Was darf man tun?",
+      keywords: { "Auto kaputt": "breaks/damages a car" },
+      signal_words: ["Auto", "kaputt", "Polizei"],
+      coach_tip_en: "No vigilante justice! Report property damage to the police (zur Polizei gehen)."
+    }
+  },
+  {
+    id: "law_5",
+    category_id: "law",
+    base_question_id: "law_5",
+    points: 2,
+    official_text: {
+      question: "In Österreich darf der Ehemann der Ehefrau und den Kindern wehtun.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👨🚫👊👩👶 Gewaltverbot",
+      short_question: "Darf der {Ehemann} der Ehefrau und den Kindern {wehtun}?",
+      keywords: { "Ehemann": "Husband", "wehtun": "hurt / hit" },
+      signal_words: ["Ehemann", "wehtun"],
+      coach_tip_en: "False! Domestic violence is completely illegal in Austria."
+    }
+  },
+  {
+    id: "law_5_1",
+    category_id: "law",
+    base_question_id: "law_5",
+    points: 2,
+    official_text: {
+      question: "In Österreich darf die Ehefrau dem Ehemann und den Kindern wehtun.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👩🚫👊👨👶 Gewaltverbot",
+      short_question: "Darf die {Ehefrau} dem Ehemann und den Kindern {wehtun}?",
+      keywords: { "Ehefrau": "Wife", "wehtun": "hurt / hit" },
+      signal_words: ["Ehefrau", "wehtun"],
+      coach_tip_en: "False! Violence in the family is forbidden for everyone—men and women alike."
+    }
+  },
+  {
+    id: "law_6",
+    category_id: "law",
+    base_question_id: "law_6",
+    points: 2,
+    official_text: {
+      question: "In Österreich darf eine Mutter ihren Kindern wehtun.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👶🛡️ Gewaltfreie Erziehung",
+      short_question: "Darf eine Mutter ihren {Kindern wehtun}?",
+      keywords: { "Kindern wehtun": "hurt/hit children" },
+      signal_words: ["Mutter", "Kindern wehtun"],
+      coach_tip_en: "False! Corporal punishment of children is strictly prohibited by law in Austria."
+    }
+  },
+  {
+    id: "law_7",
+    category_id: "law",
+    base_question_id: "law_7",
+    points: 2,
+    official_text: {
+      question: "Ich habe eine andere Meinung als meine Familie. Darf ich sie sagen?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🗣️💬 Meinungsfreiheit",
+      short_question: "Ich habe eine {andere Meinung} als meine Familie. Darf ich sie {sagen}?",
+      keywords: { "andere Meinung": "different opinion", "sagen": "say / express" },
+      signal_words: ["andere Meinung", "sagen"],
+      coach_tip_en: "Yes! Freedom of opinion (Meinungsfreiheit) applies inside your family too."
+    }
+  },
+  {
+    id: "law_8",
+    category_id: "law",
+    base_question_id: "law_8",
+    points: 2,
+    official_text: {
+      question: "In Österreich muss man die gleiche Meinung wie die Politiker und die Politikerinnen haben.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🗣️🗳️ Freie Meinung",
+      short_question: "Muss man die {gleiche Meinung} wie die {Politiker} haben?",
+      keywords: { "gleiche Meinung": "same opinion", "Politiker": "politicians" },
+      signal_words: ["gleiche Meinung", "Politiker"],
+      coach_tip_en: "False! In a democracy, you are free to disagree with politicians."
+    }
+  },
+  {
+    id: "law_9",
+    category_id: "law",
+    base_question_id: "law_9",
+    points: 2,
+    official_text: {
+      question: "Mir gefällt die Meinung eines Politikers oder einer Politikerin nicht. Darf ich dieser Person einen Brief schreiben und ihr das sagen?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "✉️🏛️ Kritik erlaubt",
+      short_question: "Darf ich einem Politiker einen {Brief schreiben}, wenn mir seine Meinung {nicht gefällt}?",
+      keywords: { "Brief schreiben": "write a letter", "nicht gefällt": "don't like" },
+      signal_words: ["Politiker", "Brief schreiben"],
+      coach_tip_en: "Yes! Writing to politicians to peacefully share your criticism is a democratic right."
+    }
+  },
+  {
+    id: "law_10",
+    category_id: "law",
+    base_question_id: "law_10",
+    points: 2,
+    official_text: {
+      question: "In einer Zeitung lese ich etwas, das mir nicht gefällt. Ich habe eine andere Meinung und möchte das gerne sagen. Darf ich das tun?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "📰🗣️ Meinungsfreiheit",
+      short_question: "Ich habe eine {andere Meinung} als die Zeitung. Darf ich das {sagen}?",
+      keywords: { "andere Meinung": "different opinion", "sagen": "say" },
+      signal_words: ["Zeitung", "andere Meinung"],
+      coach_tip_en: "Yes! You are free to express your own opinion publicly or privately."
+    }
+  },
+  {
+    id: "law_11",
+    category_id: "law",
+    base_question_id: "law_11",
+    points: 3,
+    official_text: {
+      question: "Darf eine Person in Österreich alles sagen, was sie denkt?",
+      options: [
+        { id: "a", text: "Ja, in Österreich ist alles möglich." },
+        { id: "b", text: "Nein. Es gibt Gesetze, in denen steht, was man nicht sagen darf." },
+        { id: "c", text: "Man darf alles sagen, was die Religion erlaubt." }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🗣️⚖️ Grenzen durch Gesetze",
+      short_question: "Darf eine Person in Österreich {alles sagen}, was sie denkt?",
+      keywords: { "alles sagen": "say everything / anything" },
+      signal_words: ["alles sagen", "Gesetze", "nicht sagen darf"],
+      coach_tip_en: "Free speech has legal limits (e.g., insults, hate speech, threats, or Nazi revivalism are illegal)."
+    }
+  },
+  {
+    id: "law_12",
+    category_id: "law",
+    base_question_id: "law_12",
+    points: 2,
+    official_text: {
+      question: "Damit es in Österreich sicher ist und die Menschen in Frieden leben können, sollen alle die staatlichen Gesetze respektieren.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "⚖️🕊️ Gesetze respektieren",
+      short_question: "Für Sicherheit und Frieden sollen alle die {staatlichen Gesetze respektieren}.",
+      keywords: { "staatlichen Gesetze": "state laws", "respektieren": "respect" },
+      signal_words: ["Frieden", "staatlichen Gesetze respektieren"],
+coach_tip_en: "True! Respecting state laws keeps society safe and peaceful."
+}
+},
+{
+id: "law_12_1",
+category_id: "law",
+base_question_id: "law_12",
+points: 2,
+official_text: {
+question: "In Österreich fühlen sich die Menschen sicher, weil die Menschen die staatlichen Gesetze respektieren.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🛡️⚖️ Sicherheit durch Gesetze",
+short_question: "Menschen fühlen sich {sicher}, weil alle die {staatlichen Gesetze respektieren}.",
+keywords: { "sicher": "safe", "staatlichen Gesetze": "state laws" },
+signal_words: ["sicher", "staatlichen Gesetze respektieren"],
+coach_tip_en: "True! Mutual respect for the law creates public safety."
+}
+},
+{
+id: "law_12_2",
+category_id: "law",
+base_question_id: "law_12",
+points: 2,
+official_text: {
+question: "In Österreich fühlen sich die Menschen sicher, weil auch die Polizei die staatlichen Gesetze respektiert.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🚓⚖️ Polizei respektiert Gesetze",
+short_question: "Menschen fühlen sich {sicher}, weil {auch die Polizei} die Gesetze respektiert.",
+keywords: { "sicher": "safe", "auch die Polizei": "also the police" },
+signal_words: ["sicher", "auch die Polizei", "Gesetze"],
+coach_tip_en: "True! Trust in safety comes from the police also following the law."
+}
+},
+{
+id: "law_13",
+category_id: "law",
+base_question_id: "law_13",
+points: 2,
+official_text: {
+question: "In Österreich müssen sich alle Menschen an die staatlichen Gesetze halten. Nur Politiker und Polizisten müssen die staatlichen Gesetze nicht respektieren.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "⚠️ Politiker/Polizei über dem Gesetz?",
+short_question: "{Nur Politiker und Polizisten} müssen die Gesetze {nicht respektieren}.",
+keywords: { "Nur Politiker und Polizisten": "Only politicians and police", "nicht respektieren": "not respect" },
+signal_words: ["Nur Politiker und Polizisten", "nicht respektieren"],
+coach_tip_en: "False! Politicians and police must follow the exact same laws as every citizen."
+}
+},
+{
+id: "law_14",
+category_id: "law",
+base_question_id: "law_14",
+points: 2,
+official_text: {
+question: "In Österreich macht nur der Bundespräsident oder die Bundespräsidentin Gesetze und Regeln.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🤵❌ ➔ 🏛️ Parlament",
+short_question: "Macht {nur der Bundespräsident} Gesetze und Regeln?",
+keywords: { "nur der Bundespräsident": "only the Federal President" },
+signal_words: ["nur der Bundespräsident", "Gesetze"],
+coach_tip_en: "False! Remember from Stage 1: Parliament (Parlament) makes the laws, not the President."
+}
+},
+{
+id: "law_14_1",
+category_id: "law",
+base_question_id: "law_14",
+points: 2,
+official_text: {
+question: "Das österreichische Parlament beschließt in Österreich die Gesetze.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🏛️✅ Parlament = Gesetze",
+short_question: "Das {österreichische Parlament} beschließt die {Gesetze}.",
+keywords: { "österreichische Parlament": "Austrian Parliament", "Gesetze": "laws" },
+signal_words: ["Parlament", "Gesetze"],
+coach_tip_en: "True! The Austrian Parliament passes the laws."
+}
+},
+{
+id: "law_15",
+category_id: "law",
+base_question_id: "law_15",
+points: 3,
+official_text: {
+question: "Österreich ist eine Demokratie. Was heißt das?",
+options: [
+{ id: "a", text: "Die Staatsbürger und Staatsbürgerinnen wählen Parteien in das Parlament." },
+{ id: "b", text: "In Österreich gibt es keine Religion." },
+{ id: "c", text: "Es gibt einen Präsidenten, der sein ganzes Leben lang regiert." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🗳️🏛️ Demokratie = Wählen",
+short_question: "Österreich ist eine {Demokratie}. Was heißt das?",
+keywords: { "Demokratie": "Democracy" },
+signal_words: ["Demokratie", "wählen Parteien in das Parlament"],
+coach_tip_en: "Democracy means citizens elect political parties into Parliament (wählen Parteien in das Parlament)."
+}
+},
+  // ==========================================
+  // STAGE 7: KULTURELLE INTEGRATION
+  // ==========================================
+  {
+    id: "cul_1",
+    category_id: "culture",
+    base_question_id: "cul_1",
+    points: 2,
+    official_text: {
+      question: "Darf eine Frau arbeiten, auch wenn ihr Mann das nicht will?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "👩‍💼✅ Selbstbestimmung",
+      short_question: "Darf eine Frau {arbeiten}, auch wenn ihr Mann das {nicht will}?",
+      keywords: { "arbeiten": "work", "nicht will": "does not want" },
+      signal_words: ["Frau arbeiten", "nicht will"],
+      coach_tip_en: "Yes! Women have the full legal right to work without needing permission from their husband."
+    }
+  },
+  {
+    id: "cul_2",
+    category_id: "culture",
+    base_question_id: "cul_2",
+    points: 3,
+    official_text: {
+      question: "Muss die Ehefrau die gleiche Religion haben wie ihr Ehemann?",
+      options: [
+        { id: "a", text: "Ja, wenn man verheiratet ist, müssen beide die gleiche Religion haben." },
+        { id: "b", text: "Nein, jeder kann eine andere Religion haben." },
+        { id: "c", text: "Ja, die Frau muss immer die gleiche Religion wie ihr Mann haben." }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👩🙏 ≠ 👨🙏 Religionsfreiheit",
+      short_question: "Muss die {Ehefrau} die {gleiche Religion} haben wie ihr Ehemann?",
+      keywords: { "Ehefrau": "Wife", "gleiche Religion": "same religion" },
+      signal_words: ["Ehefrau", "gleiche Religion", "Nein"],
+      coach_tip_en: "No! Freedom of religion means married partners can have completely different religions."
+    }
+  },
+  {
+    id: "cul_2_1",
+    category_id: "culture",
+    base_question_id: "cul_2",
+    points: 3,
+    official_text: {
+      question: "Muss der Ehemann die gleiche Religion haben wie seine Ehefrau?",
+      options: [
+        { id: "a", text: "Ja, wenn man verheiratet ist, müssen beide die gleiche Religion haben." },
+        { id: "b", text: "Nein, jeder kann eine andere Religion haben." },
+        { id: "c", text: "Ja, der Mann muss immer die gleiche Religion wie seine Frau haben." }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👨🙏 ≠ 👩🙏 Religionsfreiheit",
+      short_question: "Muss der {Ehemann} die {gleiche Religion} haben wie seine Ehefrau?",
+      keywords: { "Ehemann": "Husband", "gleiche Religion": "same religion" },
+      signal_words: ["Ehemann", "gleiche Religion", "Nein"],
+      coach_tip_en: "No! Same rule for both spouses—everyone chooses their own faith."
+    }
+  },
+  {
+    id: "cul_3",
+    category_id: "culture",
+    base_question_id: "cul_3",
+    points: 2,
+    official_text: {
+      question: "Muss ein Mensch das ganze Leben lang dieselbe Religion haben?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🔄🙏 Religion wechseln erlaubt",
+      short_question: "Muss man {das ganze Leben lang} dieselbe Religion haben?",
+      keywords: { "das ganze Leben lang": "for one's entire life" },
+      signal_words: ["ganze Leben lang", "dieselbe Religion"],
+      coach_tip_en: "No! In Austria, you are free to change your religion at any time."
+    }
+  },
+  {
+    id: "cul_3_1",
+    category_id: "culture",
+    base_question_id: "cul_3",
+    points: 2,
+    official_text: {
+      question: "Darf eine Person in Österreich ihre Religion ändern?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🙏🔄✅ Religion ändern",
+      short_question: "Darf eine Person ihre {Religion ändern}?",
+      keywords: { "Religion ändern": "change religion" },
+      signal_words: ["Religion ändern"],
+      coach_tip_en: "Yes! Changing or leaving a religion is a protected basic right."
+    }
+  },
+  {
+    id: "cul_3_2",
+    category_id: "culture",
+    base_question_id: "cul_3",
+    points: 2,
+    official_text: {
+      question: "Muss jede Person in Österreich eine Religion haben?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🙏 / 🚫🙏 Ohne Religion erlaubt",
+      short_question: "Muss {jede Person} eine {Religion haben}?",
+      keywords: { "jede Person": "every person", "Religion haben": "have a religion" },
+      signal_words: ["jede Person", "Religion haben"],
+      coach_tip_en: "No! You have the right to have no religion at all (ohne Bekenntnis)."
+    }
+  },
+  {
+    id: "cul_3_3",
+    category_id: "culture",
+    base_question_id: "cul_3",
+    points: 3,
+    official_text: {
+      question: "Muss ein Mensch das ganze Leben lang dieselbe Religion haben?",
+      options: [
+        { id: "a", text: "Nein, in Österreich kann jede Person ihre Religion wechseln." },
+        { id: "b", text: "In Österreich muss man den Ehemann oder die Ehefrau fragen, wenn man eine andere Religion haben möchte." },
+        { id: "c", text: "Ja, in Österreich muss man das ganze Leben lang dieselbe Religion haben." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🔄🙏 Jede Person kann wechseln",
+      short_question: "Muss ein Mensch {dieselbe Religion} behalten?",
+      keywords: { "dieselbe Religion": "the same religion" },
+      signal_words: ["ganze Leben", "Religion wechseln"],
+      coach_tip_en: "Every person can freely change their religion without asking anyone's permission."
+    }
+  },
+  {
+    id: "cul_4",
+    category_id: "culture",
+    base_question_id: "cul_4",
+    points: 2,
+    official_text: {
+      question: "Staatliche Gesetze sind für alle gleich. Es ist egal, welche Religion man hat.",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "⚖️ = Alle Religionen",
+      short_question: "Sind {staatliche Gesetze} für alle gleich, {egal welche Religion}?",
+      keywords: { "staatliche Gesetze": "state laws", "egal welche Religion": "no matter what religion" },
+      signal_words: ["Staatliche Gesetze", "für alle gleich"],
+      coach_tip_en: "Yes! Secular law applies equally to everyone regardless of religious beliefs."
+    }
+  },
+  {
+    id: "cul_4_1",
+    category_id: "culture",
+    base_question_id: "cul_4",
+    points: 2,
+    official_text: {
+      question: "Muss ich mich an die staatlichen Gesetze in Österreich halten, auch wenn meine Religion andere Regeln hat?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "⚖️ > 🙏 Staatliches Gesetz gilt",
+      short_question: "Muss man sich an {staatliche Gesetze} halten, auch wenn die {Religion andere Regeln} hat?",
+      keywords: { "staatliche Gesetze": "state laws", "Religion andere Regeln": "religion has different rules" },
+      signal_words: ["staatlichen Gesetze halten", "Religion andere Regeln"],
+      coach_tip_en: "Yes! State laws always come first in Austria."
+    }
+  },
+  {
+    id: "cul_4_2",
+    category_id: "culture",
+    base_question_id: "cul_4",
+    points: 2,
+    official_text: {
+      question: "Religiöse Regeln stehen in Österreich über dem staatlichen Gesetz.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🙏❌ über dem Gesetz",
+      short_question: "Stehen {religiöse Regeln} in Österreich {über dem staatlichen Gesetz}?",
+      keywords: { "religiöse Regeln": "religious rules", "über dem staatlichen Gesetz": "above state law" },
+      signal_words: ["Religiöse Regeln", "über dem staatlichen Gesetz"],
+      coach_tip_en: "False! State law always stands above religious rules."
+    }
+  },
+  {
+    id: "cul_5",
+    category_id: "culture",
+    base_question_id: "cul_5",
+    points: 3,
+    official_text: {
+      question: "Dürfen Jugendliche ab 14 Jahren ihre Religion frei wählen?",
+      options: [
+        { id: "a", text: "Nein, die Eltern wählen immer die Religion." },
+        { id: "b", text: "Ja, ab 14 Jahren darf man seine Religion frei wählen." },
+        { id: "c", text: "Nur Erwachsene dürfen ihre Religion frei wählen." }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🧑14+ 🙏 Frei wählen",
+      short_question: "Dürfen {Jugendliche ab 14 Jahren} ihre {Religion frei wählen}?",
+      keywords: { "Jugendliche ab 14 Jahren": "Youths from age 14", "Religion frei wählen": "freely choose religion" },
+      signal_words: ["ab 14 Jahren", "Religion frei wählen"],
+      coach_tip_en: "Key age to remember: At 14 years old (Religionsmündigkeit), teenagers can freely choose their own religion!"
+    }
+  },
+  {
+    id: "cul_6",
+    category_id: "culture",
+    base_question_id: "cul_6",
+    points: 2,
+    official_text: {
+      question: "In Österreich darf ein Mann einen anderen Mann lieben und mit ihm zusammenwohnen.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "👨‍❤️‍👨🏠✅ Erlaubt",
+      short_question: "Darf ein {Mann einen anderen Mann} lieben und zusammenwohnen?",
+      keywords: { "Mann einen anderen Mann": "a man another man" },
+      signal_words: ["Mann", "anderen Mann", "zusammenwohnen"],
+      coach_tip_en: "True! Same-sex relationships, cohabitation, and marriage are fully legal in Austria."
+    }
+  },
+  {
+    id: "cul_6_1",
+    category_id: "culture",
+    base_question_id: "cul_6",
+    points: 2,
+    official_text: {
+question: "In Österreich darf eine Frau eine andere Frau lieben und mit ihr zusammenwohnen.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "👩‍❤️‍👩🏠✅ Erlaubt",
+short_question: "Darf eine {Frau eine andere Frau} lieben und zusammenwohnen?",
+keywords: { "Frau eine andere Frau": "a woman another woman" },
+signal_words: ["Frau", "andere Frau", "zusammenwohnen"],
+coach_tip_en: "True! Women are equally free to love and live with another woman."
+}
+},
+{
+id: "cul_7",
+category_id: "culture",
+base_question_id: "cul_7",
+points: 2,
+official_text: {
+question: "Ein Mann und eine Frau haben ein Kind. Sie sind nicht verheiratet und wohnen zusammen. Ist das in Österreich erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "👨‍👩‍👦💍❌ ➔ 🏠✅",
+short_question: "Ein Paar mit Kind ist {nicht verheiratet} und wohnt zusammen. Ist das {erlaubt}?",
+keywords: { "nicht verheiratet": "not married", "erlaubt": "allowed" },
+signal_words: ["nicht verheiratet", "wohnen zusammen", "erlaubt"],
+coach_tip_en: "Yes! Unmarried couples living together and raising children is completely normal and legal."
+}
+},
+{
+id: "cul_7_1",
+category_id: "culture",
+base_question_id: "cul_7",
+points: 2,
+official_text: {
+question: "Eine Frau wohnt mit ihrem Kind in einer Wohnung. Die Frau hat keinen Ehemann. Ist das in Österreich erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "👩‍👦🏠✅ Alleinerziehend",
+short_question: "Eine Frau wohnt {ohne Ehemann} mit ihrem Kind. Ist das {erlaubt}?",
+keywords: { "ohne Ehemann": "without a husband", "erlaubt": "allowed" },
+signal_words: ["keinen Ehemann", "erlaubt"],
+coach_tip_en: "Yes! Single mothers have the exact same rights and protection as married parents."
+}
+},
+{
+id: "cul_7_2",
+category_id: "culture",
+base_question_id: "cul_7",
+points: 2,
+official_text: {
+question: "Ein Mann wohnt mit seinem Kind in einer Wohnung. Der Mann hat keine Ehefrau. Ist das in Österreich erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "👨‍👦🏠✅ Alleinerziehend",
+short_question: "Ein Mann wohnt {ohne Ehefrau} mit seinem Kind. Ist das {erlaubt}?",
+keywords: { "ohne Ehefrau": "without a wife", "erlaubt": "allowed" },
+signal_words: ["keine Ehefrau", "erlaubt"],
+coach_tip_en: "Yes! Single fathers are equally recognized and protected."
+}
+},
+{
+id: "cul_8",
+category_id: "culture",
+base_question_id: "cul_8",
+points: 3,
+official_text: {
+question: "Was ist richtig?",
+options: [
+{ id: "a", text: "Eltern dürfen ihrem Kind wehtun, wenn es schlimm ist." },
+{ id: "b", text: "Eltern dürfen ihrem Kind nie wehtun." },
+{ id: "c", text: "Eltern dürfen ihrem Kind immer wehtun." }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "👶🛡️ Eltern dürfen NIE wehtun",
+short_question: "Was ist richtig über {Eltern und Kinder}?",
+keywords: { "Eltern und Kinder": "parents and children" },
+signal_words: ["Eltern", "nie wehtun"],
+coach_tip_en: "Parents may NEVER hurt or hit their children (nie wehtun)—under any circumstances."
+}
+},
+{
+id: "cul_9",
+category_id: "culture",
+base_question_id: "cul_9",
+points: 2,
+official_text: {
+question: "Ein Mann schlägt seine Frau. Ist das erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "👨🚫👊👩 Gewalt verboten",
+short_question: "Ein Mann {schlägt seine Frau}. Ist das {erlaubt}?",
+keywords: { "schlägt seine Frau": "hits his wife", "erlaubt": "allowed" },
+signal_words: ["schlägt", "erlaubt"],
+coach_tip_en: "No! Hitting a spouse is a criminal offense in Austria."
+}
+},
+{
+id: "cul_9_1",
+category_id: "culture",
+base_question_id: "cul_9",
+points: 2,
+official_text: {
+question: "Eine Frau schlägt ihren Mann. Ist das erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "👩🚫👊👨 Gewalt verboten",
+short_question: "Eine Frau {schlägt ihren Mann}. Ist das {erlaubt}?",
+keywords: { "schlägt ihren Mann": "hits her husband", "erlaubt": "allowed" },
+signal_words: ["schlägt", "erlaubt"],
+coach_tip_en: "No! Domestic violence is illegal regardless of who commits it."
+}
+},
+{
+id: "cul_10",
+category_id: "culture",
+base_question_id: "cul_10",
+points: 2,
+official_text: {
+question: "Männer und Frauen dürfen nur zusammenleben, wenn sie verheiratet sind.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "👩👨🏠💍❌ Erlaubt",
+short_question: "Männer und Frauen dürfen {NUR zusammenleben}, wenn sie {verheiratet} sind.",
+keywords: { "NUR zusammenleben": "ONLY live together", "verheiratet": "married" },
+signal_words: ["NUR zusammenleben", "verheiratet"],
+coach_tip_en: "False! Unmarried couples can freely live together."
+}
+},
+{
+id: "cul_11",
+category_id: "culture",
+base_question_id: "cul_11",
+points: 3,
+official_text: {
+question: "Was ist in Österreich richtig?",
+options: [
+{ id: "a", text: "Wenn man nicht verheiratet ist, muss man bei seinen Eltern wohnen." },
+{ id: "b", text: "Alle Erwachsenen ab 18 Jahren dürfen selbst wählen, mit wem sie zusammenleben möchten." },
+{ id: "c", text: "Die Eltern wählen den Ehemann oder die Ehefrau für ihre Kinder." }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🧑18+ ❤️ Freie Partnerwahl",
+short_question: "Was gilt für {Erwachsene ab 18 Jahren} beim Zusammenleben?",
+keywords: { "Erwachsene ab 18 Jahren": "Adults from age 18" },
+signal_words: ["ab 18 Jahren", "selbst wählen", "zusammenleben"],
+coach_tip_en: "From age 18, adults choose for themselves whom they live with or marry—forced marriage is illegal."
+}
+},
+{
+id: "cul_11_1",
+category_id: "culture",
+base_question_id: "cul_11",
+points: 2,
+official_text: {
+question: "Alle Erwachsenen ab 18 Jahren dürfen selbst wählen, mit wem sie zusammenleben möchten.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🧑18+ ✅ Selbst wählen",
+short_question: "Erwachsene {ab 18 Jahren} dürfen {selbst wählen}, mit wem sie zusammenleben.",
+keywords: { "ab 18 Jahren": "from age 18", "selbst wählen": "choose for themselves" },
+signal_words: ["ab 18 Jahren", "selbst wählen"],
+coach_tip_en: "True! Personal freedom in relationships starts at adulthood (18)."
+}
+},
+{
+id: "cul_11_2",
+category_id: "culture",
+base_question_id: "cul_11",
+points: 2,
+official_text: {
+question: "Die Eltern wählen den Ehemann oder die Ehefrau für ihre Kinder.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "👨‍👩‍👧❌ Zwangsheirat verboten",
+short_question: "Wählen die {Eltern} den Ehemann oder die Ehefrau für ihre Kinder?",
+keywords: { "Eltern": "Parents" },
+signal_words: ["Eltern wählen", "Ehemann oder die Ehefrau"],
+coach_tip_en: "False! Arranged/forced marriage by parents is illegal—everyone chooses their own spouse."
+}
+},
+{
+id: "cul_12",
+category_id: "culture",
+base_question_id: "cul_12",
+points: 3,
+official_text: {
+question: "In Österreich arbeiten viele Menschen ehrenamtlich. Das Wort „Ehrenamt“ heißt:",
+options: [
+{ id: "a", text: "Man hilft bei einer Organisation (zum Beispiel beim Roten Kreuz) und bekommt dafür kein Geld." },
+{ id: "b", text: "Man arbeitet auf einem Amt." },
+{ id: "c", text: "Man arbeitet immer nur am Sonntag." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🤝❤️💶❌ Ehrenamt = Volunteering",
+short_question: "Was heißt das Wort {„Ehrenamt“}?",
+keywords: { "Ehrenamt": "Volunteering / honorary unpaid work" },
+signal_words: ["Ehrenamt", "kein Geld"],
+coach_tip_en: "Ehrenamt = Volunteering! Helping organizations like the Red Cross without getting paid."
+}
+},
+{
+id: "cul_13",
+category_id: "culture",
+base_question_id: "cul_13",
+points: 3,
+official_text: {
+question: "Was ist richtig?",
+options: [
+{ id: "a", text: "Nur Österreicher und Österreicherinnen dürfen ehrenamtlich arbeiten." },
+{ id: "b", text: "Alle Menschen dürfen ehrenamtlich arbeiten." },
+{ id: "c", text: "Nur Kinder dürfen ehrenamtlich arbeiten." }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🌍🤝 Alle dürfen ehrenamtlich helfen",
+short_question: "{Wer darf} in Österreich {ehrenamtlich arbeiten}?",
+keywords: { "Wer darf": "Who is allowed to", "ehrenamtlich arbeiten": "volunteer" },
+signal_words: ["Alle Menschen", "ehrenamtlich"],
+coach_tip_en: "Anyone living in Austria can volunteer—it's also a great way to practice German and meet locals!"
+}
+},
+{
+id: "cul_14",
+category_id: "culture",
+base_question_id: "cul_14",
+points: 3,
+official_text: {
+question: "Eine Person möchte ehrenamtlich arbeiten. Wo ist das möglich?",
+options: [
+{ id: "a", text: "Zum Beispiel bei der Feuerwehr oder bei der Rettung." },
+{ id: "b", text: "In jeder Firma." },
+{ id: "c", text: "Nur bei der Polizei." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🚒🚑🤝 Feuerwehr / Rettung",
+short_question: "{Wo} kann man {ehrenamtlich arbeiten}?",
+keywords: { "ehrenamtlich arbeiten": "volunteer" },
+signal_words: ["ehrenamtlich", "Feuerwehr oder bei der Rettung"],
+coach_tip_en: "Austria's volunteer fire brigades (Freiwillige Feuerwehr) and ambulance services rely heavily on volunteers!"
+}
+},
+{
+id: "cul_15",
+category_id: "culture",
+base_question_id: "cul_15",
+points: 3,
+official_text: {
+question: "Ich bin neu in der Firma. Ich lerne meine neuen Kollegen und Kolleginnen kennen. Was ist höflich?",
+options: [
+{ id: "a", text: "Ich gebe meinen Kollegen und Kolleginnen die Hand." },
+{ id: "b", text: "Ich gebe nur meinen Kollegen die Hand." },
+{ id: "c", text: "Ich gebe nur meinen Kolleginnen die Hand." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🤝👩‍💼👨‍💼 Alle begrüßen",
+short_question: "Ich lerne neue {Kollegen und Kolleginnen} kennen. Was ist {höflich}?",
+keywords: { "Kollegen und Kolleginnen": "male and female colleagues", "höflich": "polite" },
+signal_words: ["Kollegen und Kolleginnen", "die Hand"],
+coach_tip_en: "In Austria, it's polite to greet and shake hands with both male and female colleagues equally."
+}
 }
   ]
