@@ -1626,5 +1626,1212 @@ keywords: { "Nettogehalt": "Net salary", "auch noch Steuern": "also pay taxes" }
 signal_words: ["Nettogehalt", "noch Steuern"],
 coach_tip_en: "False! Netto is yours to keep—taxes were already paid by your company."
 }
+},
+  // ==========================================
+  // STAGE 4: GESUNDHEIT
+  // ==========================================
+  {
+    id: "health_1",
+    category_id: "health",
+    base_question_id: "health_1",
+    points: 3,
+    official_text: {
+      question: "Welche wichtigen Informationen stehen auf der e-card?",
+      options: [
+        { id: "a", text: "Die Sozialversicherungsnummer und der Name der Person, die die Karte benutzen darf." },
+        { id: "b", text: "Die Adresse und die Telefonnummer der Person, die die Karte benutzen darf." },
+        { id: "c", text: "Die gemeinsame Sozialversicherungsnummer der Familie." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "💳🏥 Name + SV-Nr.",
+      short_question: "Welche {Informationen} stehen auf der {e-card}?",
+      keywords: { "Informationen": "information", "e-card": "Austrian health insurance card" },
+      signal_words: ["e-card", "Sozialversicherungsnummer und der Name"],
+      coach_tip_en: "Your personal e-card shows YOUR name and YOUR social security number (Sozialversicherungsnummer)—never a family number!"
+    }
+  },
+  {
+    id: "health_2",
+    category_id: "health",
+    base_question_id: "health_2",
+    points: 2,
+    official_text: {
+      question: "Eine Frau hat eine Krankenversicherung und eine e-card. Ihr Mann hat keine Krankenversicherung. Gilt die e-card von der Frau auch für den Mann?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👩💳❌ ➔ 👨",
+      short_question: "Gilt die {e-card von der Frau} auch für den {Mann}?",
+      keywords: { "e-card von der Frau": "the wife's e-card", "Mann": "husband" },
+      signal_words: ["e-card", "auch für den Mann"],
+      coach_tip_en: "No! Every person needs their own e-card. Sharing an e-card with anyone—even your spouse—is not allowed."
+    }
+  },
+  {
+    id: "health_2_1",
+    category_id: "health",
+    base_question_id: "health_2",
+    points: 2,
+    official_text: {
+      question: "Ein Mann hat eine Krankenversicherung und eine e-card. Seine Schwester ist krank und möchte zum Arzt gehen. Sie hat keine Krankenversicherung. Darf der Mann seiner Schwester seine e-card geben?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "👨💳❌ ➔ 👩 Schwester",
+      short_question: "Darf der Mann seiner {Schwester} seine {e-card geben}?",
+      keywords: { "Schwester": "sister", "e-card geben": "give/lend his e-card" },
+      signal_words: ["Schwester", "e-card geben"],
+      coach_tip_en: "No! The e-card is strictly personal and cannot be lent to family members."
+    }
+  },
+  {
+    id: "health_3",
+    category_id: "health",
+    base_question_id: "health_3",
+    points: 2,
+    official_text: {
+      question: "Bekommen Kinder eine eigene e-card?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "👶👧💳 Eigene e-card",
+      short_question: "Bekommen {Kinder} eine {eigene e-card}?",
+      keywords: { "Kinder": "Children", "eigene e-card": "own e-card" },
+      signal_words: ["Kinder", "eigene e-card"],
+      coach_tip_en: "Yes! Even babies and children receive their own personal e-card."
+    }
+  },
+  {
+    id: "health_4",
+    category_id: "health",
+    base_question_id: "health_4",
+    points: 2,
+    official_text: {
+      question: "Gesunde Menschen bekommen im österreichischen Gesundheitssystem Tipps und Hilfe, um gesund zu bleiben.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🍎🏃‍♂️ Gesundheitstipps",
+      short_question: "{Gesunde Menschen} bekommen Tipps und Hilfe, um {gesund zu bleiben}.",
+      keywords: { "Gesunde Menschen": "Healthy people", "gesund zu bleiben": "to stay healthy" },
+      signal_words: ["Gesunde Menschen", "gesund zu bleiben"],
+      coach_tip_en: "True! Prevention (Vorsorge) helps healthy people stay healthy."
+    }
+  },
+  {
+    id: "health_4_1",
+    category_id: "health",
+    base_question_id: "health_4",
+    points: 2,
+    official_text: {
+      question: "Kranke Menschen bekommen im österreichischen Gesundheitssystem Tipps und Hilfe, um gesund zu werden.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🤒🏥 ➔ 💪 Gesund werden",
+      short_question: "{Kranke Menschen} bekommen Hilfe, um {gesund zu werden}.",
+      keywords: { "Kranke Menschen": "Sick people", "gesund zu werden": "to get well/healthy" },
+      signal_words: ["Kranke Menschen", "gesund zu werden"],
+      coach_tip_en: "True! The healthcare system supports sick people in recovering."
+    }
+  },
+  {
+    id: "health_5",
+    category_id: "health",
+    base_question_id: "health_5",
+    points: 3,
+    official_text: {
+      question: "Woher kommt das Geld für das öffentliche Gesundheitssystem?",
+      options: [
+        { id: "a", text: "Von allen Menschen, die in Österreich Steuern und Krankenversicherung bezahlen." },
+        { id: "b", text: "Nur von den Patienten und Patientinnen." },
+        { id: "c", text: "Nur von Firmen." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🏥💶 ➔ 👥 Steuern",
+      short_question: "{Woher kommt das Geld} für das {Gesundheitssystem}?",
+      keywords: { "Woher kommt das Geld": "Where does the money come from", "Gesundheitssystem": "healthcare system" },
+      signal_words: ["Geld", "Gesundheitssystem", "Steuern und Krankenversicherung"],
+      coach_tip_en: "Public healthcare is funded by everyone paying taxes and health insurance contributions."
+    }
+  },
+  {
+    id: "health_6",
+    category_id: "health",
+    base_question_id: "health_6",
+    points: 2,
+    official_text: {
+      question: "Es gibt in Österreich ein öffentliches Gesundheitssystem. Mit einem öffentlichen Gesundheitssystem ist es möglich, dass alle Menschen medizinische Hilfe bekommen.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🏥🤝 Alle Menschen",
+      short_question: "Mit dem {öffentlichen Gesundheitssystem} bekommen {alle Menschen} Hilfe.",
+      keywords: { "öffentlichen Gesundheitssystem": "public healthcare system", "alle Menschen": "all people" },
+      signal_words: ["öffentliches Gesundheitssystem", "alle Menschen"],
+      coach_tip_en: "True! Universal public healthcare ensures medical care is accessible to everyone."
+    }
+  },
+  {
+    id: "health_7",
+    category_id: "health",
+    base_question_id: "health_7",
+    points: 2,
+    official_text: {
+      question: "Das österreichische Gesundheitssystem bezahlt alle Arztbesuche und Untersuchungen.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🏥💶⚠️ ALLE Arztbesuche?",
+      short_question: "Das Gesundheitssystem bezahlt {ALLE Arztbesuche} und Untersuchungen.",
+      keywords: { "ALLE Arztbesuche": "ALL doctor visits (watch out for 'all'!)" },
+      signal_words: ["bezahlt", "ALLE"],
+      coach_tip_en: "False! Watch out for 'alle'—some private doctors (Wahlärzte) or special checkups cost extra."
+    }
+  },
+  {
+    id: "health_8",
+    category_id: "health",
+    base_question_id: "health_8",
+    points: 2,
+    official_text: {
+      question: "Es gibt ärztliche Untersuchungen, für die man selbst bezahlen muss.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🩺💶 Selbst bezahlen",
+      short_question: "Es gibt Untersuchungen, für die man {selbst bezahlen} muss.",
+      keywords: { "selbst bezahlen": "pay yourself (out of pocket)" },
+      signal_words: ["Untersuchungen", "selbst bezahlen"],
+      coach_tip_en: "True! Certain extra checkups or private services must be paid out of pocket."
+    }
+  },
+  {
+    id: "health_9",
+    category_id: "health",
+    base_question_id: "health_9",
+    points: 2,
+    official_text: {
+      question: "Im Krankenhaus arbeiten Ärztinnen und Ärzte. Man kann immer wählen, wer helfen soll.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🏥👩‍⚕️👨‍⚕️ Immer wählen?",
+      short_question: "Im Krankenhaus kann man {IMMER wählen}, wer helfen soll.",
+      keywords: { "IMMER wählen": "ALWAYS choose" },
+      signal_words: ["Krankenhaus", "IMMER wählen"],
+      coach_tip_en: "False! In a hospital, you cannot always choose whether a male or female doctor treats you."
+    }
+  },
+  {
+      id: "health_9_1",
+    category_id: "health",
+    base_question_id: "health_9",
+    points: 2,
+    official_text: {
+      question: "Eine Frau kommt ins Krankenhaus. Sie will, dass eine Ärztin sie untersucht. Sie will nicht, dass ein Arzt sie untersucht. Ist es immer möglich, dass nur eine Frau sie untersucht?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🏥👩 ➔ 👩‍⚕️ Immer möglich?",
+      short_question: "Ist es im Krankenhaus {immer möglich}, dass {nur eine Ärztin} untersucht?",
+      keywords: { "immer möglich": "always possible", "nur eine Ärztin": "only a female doctor" },
+      signal_words: ["Krankenhaus", "immer möglich", "nur eine Frau"],
+      coach_tip_en: "No! Hospitals assign whichever doctor is on duty—it's not always possible to request only a female doctor."
+    }
+  },
+  {
+    id: "health_9_2",
+    category_id: "health",
+    base_question_id: "health_9",
+    points: 2,
+    official_text: {
+      question: "Ein Mann kommt ins Krankenhaus. Er will, dass ein Arzt ihn untersucht. Er will nicht, dass eine Ärztin ihn untersucht. Ist es immer möglich, dass nur ein Mann ihn untersucht?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🏥👨 ➔ 👨‍⚕️ Immer möglich?",
+      short_question: "Ist es im Krankenhaus {immer möglich}, dass {nur ein Arzt} untersucht?",
+      keywords: { "immer möglich": "always possible", "nur ein Arzt": "only a male doctor" },
+      signal_words: ["Krankenhaus", "immer möglich", "nur ein Mann"],
+      coach_tip_en: "No! Same rule for men: you cannot always choose the gender of your doctor in a hospital."
+    }
+  },
+  {
+    id: "health_10",
+    category_id: "health",
+    base_question_id: "health_10",
+    points: 3,
+    official_text: {
+      question: "Was ist ein Augenarzt oder eine Augenärztin?",
+      options: [
+        { id: "a", text: "Ein Arzt oder eine Ärztin für den ganzen Körper." },
+        { id: "b", text: "Ein Hausarzt oder eine Hausärztin." },
+        { id: "c", text: "Ein Facharzt oder eine Fachärztin." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "👁️🩺 Facharzt",
+      short_question: "Was ist ein {Augenarzt}?",
+      keywords: { "Augenarzt": "Eye doctor (ophthalmologist)" },
+      signal_words: ["Augenarzt", "Facharzt"],
+      coach_tip_en: "Facharzt = Specialist doctor! An eye doctor specializes in eyes, unlike a general practitioner (Hausarzt)."
+    }
+  },
+  {
+    id: "health_10_1",
+    category_id: "health",
+    base_question_id: "health_10",
+    points: 3,
+    official_text: {
+      question: "Was ist eine Frauenärztin oder ein Frauenarzt?",
+      options: [
+        { id: "a", text: "Ein Arzt oder eine Ärztin für den ganzen Körper." },
+        { id: "b", text: "Ein Hausarzt oder eine Hausärztin." },
+        { id: "c", text: "Ein Facharzt oder eine Fachärztin." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "🤰🩺 Facharzt",
+      short_question: "Was ist eine {Frauenärztin}?",
+      keywords: { "Frauenärztin": "Gynecologist (OB/GYN)" },
+      signal_words: ["Frauenärztin", "Facharzt"],
+      coach_tip_en: "A gynecologist (Frauenarzt/Frauenärztin) is also a specialist (Facharzt)."
+    }
+  },
+  {
+    id: "health_10_2",
+    category_id: "health",
+    base_question_id: "health_10",
+    points: 3,
+    official_text: {
+      question: "Was untersucht eine Hausärztin oder ein Hausarzt?",
+      options: [
+        { id: "a", text: "Den ganzen Körper." },
+        { id: "b", text: "Nur die Zähne." },
+        { id: "c", text: "Nur die Augen." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🩺🧍 Ganzer Körper",
+      short_question: "Was untersucht ein {Hausarzt}?",
+      keywords: { "Hausarzt": "General practitioner / family doctor" },
+      signal_words: ["Hausarzt", "ganzen Körper"],
+      coach_tip_en: "Your Hausarzt is your primary care doctor who checks your whole body (den ganzen Körper)."
+    }
+  },
+  {
+    id: "health_11",
+    category_id: "health",
+    base_question_id: "health_11",
+    points: 3,
+    official_text: {
+      question: "Wer arbeitet in einem Krankenhaus?",
+      options: [
+        { id: "a", text: "Nur Männer." },
+        { id: "b", text: "Nur Frauen." },
+        { id: "c", text: "Frauen und Männer." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "👩‍⚕️ + 👨‍⚕️ 🏥",
+      short_question: "{Wer arbeitet} in einem Krankenhaus?",
+      keywords: { "Wer arbeitet": "Who works" },
+      signal_words: ["Krankenhaus", "Frauen und Männer"],
+      coach_tip_en: "Both women and men work as doctors, nurses, and staff in hospitals."
+    }
+  },
+  {
+    id: "health_12",
+    category_id: "health",
+    base_question_id: "health_12",
+    points: 3,
+    official_text: {
+      question: "Eine Person hat leichtes Fieber und Kopfschmerzen. Warum soll sie zuerst zum Hausarzt und nicht in die Krankenhaus-Ambulanz gehen?",
+      options: [
+        { id: "a", text: "Weil die Krankenhaus-Ambulanz für Notfälle da ist. Schwer Kranke und Verletzte müssen sonst länger warten." },
+        { id: "b", text: "Weil der Hausarzt von 0:00–24:00 Uhr da ist." },
+        { id: "c", text: "Weil die Krankenhaus-Ambulanz teurer ist." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🤒 ➔ 🩺 Hausarzt (nicht Ambulanz)",
+      short_question: "Warum bei {leichtem Fieber} zum {Hausarzt} und nicht in die Ambulanz?",
+      keywords: { "leichtem Fieber": "mild fever", "Hausarzt": "family doctor" },
+      signal_words: ["leichtes Fieber", "Notfälle", "länger warten"],
+      coach_tip_en: "The ER (Krankenhaus-Ambulanz) is for real emergencies! Mild fever belongs at the Hausarzt so emergencies don't wait."
+    }
+  },
+  {
+    id: "health_13",
+    category_id: "health",
+    base_question_id: "health_13",
+    points: 3,
+    official_text: {
+      question: "Ein Kind spielt mit seiner Mutter am Spielplatz. Das Kind verletzt sich schwer. Was soll die Mutter tun?",
+      options: [
+        { id: "a", text: "Sie geht mit dem Kind zum Hausarzt oder zur Hausärztin." },
+        { id: "b", text: "Das ist ein Notfall. Sie ruft die Rettung." },
+        { id: "c", text: "Sie kauft in einer Apotheke Medizin." }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🚑⚠️ Schwer verletzt = Notfall",
+      short_question: "Ein Kind {verletzt sich schwer}. Was soll die Mutter tun?",
+      keywords: { "verletzt sich schwer": "gets badly injured" },
+      signal_words: ["verletzt sich schwer", "Notfall", "Rettung"],
+      coach_tip_en: "Severe injury (schwer verletzt) = Emergency (Notfall)! Call emergency services (Rettung: 144)."
+    }
+  },
+  {
+    id: "health_14",
+    category_id: "health",
+    base_question_id: "health_14",
+    points: 3,
+    official_text: {
+      question: "Wenn es brennt, ruft man die Feuerwehr. Welche Notrufnummer hat die Feuerwehr?",
+      options: [
+        { id: "a", text: "122" },
+        { id: "b", text: "133" },
+        { id: "c", text: "144" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🚒🔥 122",
+      short_question: "Welche {Notrufnummer} hat die {Feuerwehr}?",
+      keywords: { "Notrufnummer": "Emergency number", "Feuerwehr": "Fire department" },
+      signal_words: ["brennt", "Feuerwehr", "122"],
+      coach_tip_en: "Memory trick: 122 = Feuerwehr (think of 2 fire hoses!)."
+    }
+  },
+  {
+    id: "health_15",
+    category_id: "health",
+    base_question_id: "health_15",
+    points: 3,
+    official_text: {
+      question: "Eine Person ist schwer verletzt. Welche Notrufnummer hat die Rettung?",
+      options: [
+        { id: "a", text: "122" },
+        { id: "b", text: "133" },
+        { id: "c", text: "144" }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "🚑🏥 144",
+      short_question: "Welche {Notrufnummer} hat die {Rettung}?",
+      keywords: { "Notrufnummer": "Emergency number", "Rettung": "Ambulance / paramedics" },
+      signal_words: ["verletzt", "Rettung", "144"],
+      coach_tip_en: "Memory trick: 144 = Rettung (4 wheels on an ambulance!)."
+    }
+  },
+  {
+    id: "health_16",
+    category_id: "health",
+    base_question_id: "health_16",
+    points: 3,
+    official_text: {
+      question: "Welche Notrufnummer soll ich anrufen, wenn ich Hilfe von der Polizei brauche?",
+      options: [
+        { id: "a", text: "122" },
+        { id: "b", text: "133" },
+        { id: "c", text: "144" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🚓👮 133",
+      short_question: "Welche {Notrufnummer} hat die {Polizei}?",
+      keywords: { "Notrufnummer": "Emergency number", "Polizei": "Police" },
+      signal_words: ["Polizei", "133"],
+      coach_tip_en: "Memory trick: 133 = Polizei (the 3s look like handcuffs!)."
+    }
+  },
+  {
+    id: "health_17",
+    category_id: "health",
+    base_question_id: "health_17",
+    points: 3,
+    official_text: {
+      question: "Welche Notrufnummer funktioniert in ganz Europa?",
+      options: [
+        { id: "a", text: "112" },
+        { id: "b", text: "113" },
+        { id: "c", text: "114" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🇪🇺📞 112",
+      short_question: "Welche {Notrufnummer} funktioniert in {ganz Europa}?",
+      keywords: { "Notrufnummer": "Emergency number", "ganz Europa": "all of Europe" },
+      signal_words: ["ganz Europa", "112"],
+      coach_tip_en: "112 is the universal European emergency number (like emergency services in the US)!"
+    }
+  },
+  {
+    id: "health_18",
+    category_id: "health",
+    base_question_id: "health_18",
+    points: 2,
+    official_text: {question: "Eine Frau hat Probleme mit einem Mann. Der Mann verletzt die Frau. Unter der Notrufnummer 0800 222 555 kann die Frau sofort und gratis Hilfe bekommen.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "📞🛡️ 0800 222 555 (Gratis)",
+short_question: "Unter {0800 222 555} bekommt eine Frau {sofort und gratis Hilfe}.",
+keywords: { "sofort und gratis Hilfe": "immediate and free help" },
+signal_words: ["0800 222 555", "sofort und gratis"],
+coach_tip_en: "True! 0800 222 555 is Austria's 24/7 free women's helpline (Frauenhelpline gegen Gewalt)."
+}
+},
+{
+
+id: "health_19",
+category_id: "health",
+base_question_id: "health_19",
+points: 3,
+official_text: {
+question: "Kann eine Person eine Notrufnummer anrufen, wenn sie kein Guthaben auf ihrem Handy hat?",
+options: [
+{ id: "a", text: "Ja, der Anruf bei einer Notrufnummer ist immer kostenlos." },
+{ id: "b", text: "Nein, ein Anruf bei einer Notrufnummer kostet Geld." },
+{ id: "c", text: "Ja, aber nur zu den Öffnungszeiten (09:00—18:00 Uhr)." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "📱💶❌ ➔ 📞112 ✅",
+short_question: "Kann man eine {Notrufnummer} anrufen, wenn man {kein Guthaben} hat?",
+keywords: { "Notrufnummer": "Emergency number", "kein Guthaben": "no credit / balance on phone" },
+signal_words: ["Notrufnummer", "kein Guthaben", "immer kostenlos"],
+coach_tip_en: "Emergency calls are ALWAYS free (immer kostenlos), even with zero phone credit!"
+}
+},
+{
+id: "health_20",
+category_id: "health",
+base_question_id: "health_20",
+points: 3,
+official_text: {
+question: "Kann eine Person eine Notrufnummer auch aus einer Telefonzelle anrufen, wenn sie kein Geld hat?",
+options: [
+{ id: "a", text: "Nein, das funktioniert nicht." },
+{ id: "b", text: "Ja, ein Anruf bei einer Notrufnummer ist auch in der Telefonzelle kostenlos." },
+{ id: "c", text: "Ja, aber nur zwischen 08:00 und 20:00 Uhr." }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "☎️💶❌ ➔ 📞112 ✅",
+short_question: "Ist ein {Notruf} auch aus einer {Telefonzelle} ohne Geld möglich?",
+keywords: { "Notruf": "Emergency call", "Telefonzelle": "Payphone / phone booth" },
+signal_words: ["Notrufnummer", "Telefonzelle", "kostenlos"],
+coach_tip_en: "Yes! Emergency calls from public payphones are also completely free 24/7."
+}
+},
+{
+id: "health_21",
+category_id: "health",
+base_question_id: "health_21",
+points: 2,
+official_text: {
+question: "Jede Person muss die Rettung anrufen, wenn andere Menschen einen medizinischen Notfall haben.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🚑📞 Pflicht zu helfen",
+short_question: "{Jede Person muss} die {Rettung} anrufen, wenn andere einen {Notfall} haben.",
+keywords: { "Jede Person muss": "Every person must", "Notfall": "emergency" },
+signal_words: ["Jede Person muss", "Rettung", "Notfall"],
+coach_tip_en: "True! In Austria, failing to help or call emergency services in an emergency is illegal (Unterlassene Hilfeleistung)."
+}
+},
+{
+id: "health_21_1",
+category_id: "health",
+base_question_id: "health_21",
+points: 2,
+official_text: {
+question: "Notrufnummern muss man nur anrufen, wenn jemand aus der Familie einen medizinischen Notfall hat.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "⚠️ NUR Familie? 🚑",
+short_question: "Notrufnummern muss man {NUR} anrufen, wenn jemand aus der {Familie} einen Notfall hat.",
+keywords: { "NUR": "ONLY", "Familie": "family" },
+signal_words: ["NUR", "Familie"],
+coach_tip_en: "False! You must call for help for ANYONE in need—even total strangers."
+}
+},
+{
+id: "health_21_2",
+category_id: "health",
+base_question_id: "health_21",
+points: 3,
+official_text: {
+question: "Eine Person sieht einen Unfall. Was muss die Person tun?",
+options: [
+{ id: "a", text: "Sie schaut weg und geht weiter." },
+{ id: "b", text: "Nichts. Eine andere Person soll helfen." },
+{ id: "c", text: "Sie muss selbst helfen oder Hilfe holen." }
+],
+correct_option: "c"
+},
+learning_aids: {
+visual_anchor: "💥🚗 ➔ 🤝 Hilfe holen",
+short_question: "Eine Person sieht einen {Unfall}. Was {muss} sie tun?",
+keywords: { "Unfall": "Accident", "muss": "must" },
+signal_words: ["Unfall", "selbst helfen oder Hilfe holen"],
+coach_tip_en: "If you witness an accident, you are legally required to help or call for help!"
+}
+},
+{
+id: "health_22",
+category_id: "health",
+base_question_id: "health_22",
+points: 3,
+official_text: {
+question: "Eine Person sieht, wie jemand eine andere Person schlägt. Was muss sie tun?",
+options: [
+{ id: "a", text: "Sie ruft die Polizei an." },
+{ id: "b", text: "Sie läuft schnell weg." },
+{ id: "c", text: "Sie macht sofort ein Video mit dem Handy." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "👊⚠️ ➔ 📞🚓 133",
+short_question: "Jemand {schlägt} eine andere Person. Was muss man tun?",
+keywords: { "schlägt": "hits / beats" },
+signal_words: ["schlägt", "Polizei"],
+coach_tip_en: "Call emergency services (133) immediately—don't film or ignore violence."
+}
+},
+{
+id: "health_23",
+category_id: "health",
+base_question_id: "health_23",
+points: 3,
+official_text: {
+question: "Wann darf man eine kranke Person im Krankenhaus besuchen?",
+options: [
+{ id: "a", text: "Immer, wenn man Zeit hat." },
+{ id: "b", text: "Zu den Besuchszeiten." },
+{ id: "c", text: "Man darf niemanden im Krankenhaus besuchen." }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🏥🕒 Besuchszeiten",
+short_question: "{Wann} darf man jemanden im {Krankenhaus besuchen}?",
+keywords: { "Wann": "When", "Krankenhaus besuchen": "visit in the hospital" },
+signal_words: ["Krankenhaus besuchen", "Besuchszeiten"],
+coach_tip_en: "Besuchszeiten = Visiting hours! Hospitals only allow visitors during official visiting hours."
+}
+},
+{
+id: "health_24",
+category_id: "health",
+base_question_id: "health_24",
+points: 2,
+official_text: {
+question: "Eine Vorsorgeuntersuchung ist eine große medizinische Untersuchung. Jede Person darf sie einmal im Jahr gratis machen.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🩺📅 1×/Jahr GRATIS",
+short_question: "Eine {Vorsorgeuntersuchung} darf man {einmal im Jahr gratis} machen.",
+keywords: { "Vorsorgeuntersuchung": "Preventive health check-up", "einmal im Jahr gratis": "once a year for free" },
+signal_words: ["Vorsorgeuntersuchung", "einmal im Jahr gratis"],
+coach_tip_en: "True! Everyone in Austria gets one free annual preventive health checkup (Vorsorgeuntersuchung)."
+}
+},
+{
+id: "health_25",
+category_id: "health",
+base_question_id: "health_25",
+points: 3,
+official_text: {
+question: "Wer kann die Mutter-Kind-Pass-Untersuchungen machen?",
+options: [
+{ id: "a", text: "Schwangere Frauen und Frauen mit Kindern bis 5 Jahre." },
+{ id: "b", text: "Kinder bis 18 Jahre." },
+{ id: "c", text: "Nur Frauen mit österreichischer Staatsbürgerschaft." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🤰👶 Mutter-Kind-Pass (bis 5 J.)",
+short_question: "{Wer} macht die {Mutter-Kind-Pass-Untersuchungen}?",
+keywords: { "Mutter-Kind-Pass-Untersuchungen": "Mother-Child-Pass checkups" },
+signal_words: ["Mutter-Kind-Pass", "Schwangere Frauen", "bis 5 Jahre"],
+coach_tip_en: "The Mutter-Kind-Pass covers checkups for pregnant women and children up to age 5."
+}
+},
+{
+id: "health_26",
+category_id: "health",
+base_question_id: "health_26",
+points: 3,
+official_text: {
+question: "Warum gibt es Mutter-Kind-Pass-Untersuchungen?",
+options: [
+{ id: "a", text: "Damit die Mutter weiß, dass es ihr und dem Kind gut geht." },
+{ id: "b", text: "Damit der Arzt oder die Ärztin viel Geld verdient." },
+{ id: "c", text: "Damit das Kind die österreichische Staatsbürgerschaft bekommt." }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🤰👶❤️ Gesundheit prüfen",
+short_question: "{Warum} gibt es {Mutter-Kind-Pass-Untersuchungen}?",
+keywords: { "Warum": "Why" },
+signal_words: ["Warum", "Mutter-Kind-Pass", "ihr und dem Kind gut geht"],
+coach_tip_en: "The goal is early medical care to make sure both mother and baby are healthy."
+}
+},
+// ==========================================
+  // STAGE 5: WOHNEN UND NACHBARSCHAFT
+  // ==========================================
+  {
+    id: "living_1",
+    category_id: "living",
+    base_question_id: "living_1",
+    points: 3,
+    official_text: {
+      question: "Eine Person wohnt in einer Mietwohnung. Was ist richtig?",
+      options: [
+        { id: "a", text: "Sie muss einmal im Monat Miete bezahlen." },
+        { id: "b", text: "Sie muss die Wohnung kaufen." },
+        { id: "c", text: "Sie kann die Wohnung verkaufen." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🏢💶 1×/Monat Miete",
+      short_question: "Eine Person wohnt in einer {Mietwohnung}. Was ist richtig?",
+      keywords: { "Mietwohnung": "Rental apartment" },
+      signal_words: ["Mietwohnung", "einmal im Monat Miete"],
+      coach_tip_en: "Mietwohnung = Rental apartment! You pay rent (Miete) once a month."
+    }
+  },
+  {
+    id: "living_2",
+    category_id: "living",
+    base_question_id: "living_2",
+    points: 2,
+    official_text: {
+      question: "Eine Person hat ein Haus gekauft. Muss sie für dieses Haus noch Miete bezahlen?",
+      options: [
+        { id: "a", text: "ja" },
+        { id: "b", text: "nein" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🏡✅ Kauf = Keine Miete",
+      short_question: "Man hat ein Haus {gekauft}. Muss man noch {Miete} bezahlen?",
+      keywords: { "gekauft": "bought", "Miete": "rent" },
+      signal_words: ["gekauft", "Miete"],
+      coach_tip_en: "No! Once you buy (kaufen) a house, you own it and don't pay rent."
+    }
+  },
+  {
+    id: "living_3",
+    category_id: "living",
+    base_question_id: "living_3",
+    points: 3,
+    official_text: {
+      question: "Eine Person wäscht um 24 Uhr ihre Wäsche. Ihr Nachbar sagt: „Mich stört das. Ich möchte schlafen, Sie dürfen das nicht!“ Hat er recht?",
+      options: [
+        { id: "a", text: "Ja, um diese Zeit ist Nachtruhe." },
+        { id: "b", text: "Nein, man darf seine Wäsche immer waschen." },
+        { id: "c", text: "Ja, man darf die Wäsche nur am Nachmittag waschen." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🕛🤫 Nachtruhe (22–06 Uhr)",
+      short_question: "Jemand wäscht um {24 Uhr} Wäsche. Hat der Nachbar recht?",
+      keywords: { "24 Uhr": "Midnight (12:00 AM)" },
+      signal_words: ["24 Uhr", "Nachtruhe"],
+      coach_tip_en: "Nachtruhe = Quiet hours (usually 10 PM to 6 AM)! No loud laundry or music at midnight."
+    }
+  },
+  {
+    id: "living_4",
+    category_id: "living",
+    base_question_id: "living_4",
+    points: 3,
+    official_text: {
+      question: "Eine Person wohnt in einer Wohnung und möchte ein Haustier haben. Darf sie das?",
+      options: [
+        { id: "a", text: "Nein." },
+        { id: "b", text: "Ja." },
+        { id: "c", text: "Sie muss zuerst im Mietvertrag oder in der Hausordnung nachlesen." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "🐶📄 Mietvertrag / Hausordnung",
+      short_question: "Darf man in einer Wohnung ein {Haustier} haben?",
+      keywords: { "Haustier": "Pet" },
+      signal_words: ["Haustier", "Mietvertrag oder in der Hausordnung"],
+      coach_tip_en: "Always check your lease (Mietvertrag) or house rules (Hausordnung) before getting a pet!"
+    }
+  },
+  {
+    id: "living_5",
+    category_id: "living",
+    base_question_id: "living_5",
+    points: 3,
+    official_text: {
+      question: "Wo steht, wie viel Miete man für eine Wohnung bezahlen muss?",
+      options: [
+        { id: "a", text: "Im Mietvertrag." },
+        { id: "b", text: "Im Kaufvertrag." },
+        { id: "c", text: "In der Hausordnung." }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "📄💶 Mietvertrag",
+      short_question: "{Wo steht}, wie viel {Miete} man bezahlen muss?",
+      keywords: { "Wo steht": "Where is it written", "Miete": "Rent" },
+      signal_words: ["wie viel Miete", "Mietvertrag"],
+      coach_tip_en: "Mietvertrag = Rental contract / lease. That's where the rent amount is stated."
+    }
+  },
+  {
+    id: "living_6",
+    category_id: "living",
+    base_question_id: "living_6",
+    points: 3,
+    official_text: {
+      question: "Eine Person möchte die Eingangstür ihrer Mietwohnung rot anmalen. Darf sie das?",
+      options: [
+        { id: "a", text: "Nein." },
+        { id: "b", text: "Ja." },
+        { id: "c", text: "Sie muss im Mietvertrag nachlesen und mit dem Vermieter oder der Vermieterin sprechen." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "🚪🎨🤝 Vermieter fragen",
+      short_question: "Darf man die {Eingangstür rot anmalen}?",
+      keywords: { "Eingangstür": "Front door", "rot anmalen": "paint red" },
+      signal_words: ["Eingangstür", "Mietvertrag", "Vermieter"],
+      coach_tip_en: "Before changing doors or walls in a rental, check the Mietvertrag and talk to the landlord (Vermieter)!"
+    }
+  },
+  {
+    id: "living_7",
+    category_id: "living",
+    base_question_id: "living_7",
+    points: 2,
+    official_text: {
+      question: "Die Hausordnung regelt das gute Zusammenleben in einem Haus. In der Hausordnung kann man sich zum Beispiel über die Ruhezeiten im Haus informieren.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "📋🏢 Hausordnung = Ruhezeiten",
+      short_question: "Die {Hausordnung} regelt das Zusammenleben und die {Ruhezeiten}.",
+      keywords: { "Hausordnung": "House rules", "Ruhezeiten": "Quiet hours" },
+      signal_words: ["Hausordnung", "Ruhezeiten"],
+      coach_tip_en: "True! The Hausordnung lists building rules, including quiet hours (Ruhezeiten)."
+    }
+  },
+  {
+    id: "living_8",
+    category_id: "living",
+    base_question_id: "living_8",
+    points: 2,
+    official_text: {
+      question: "In einem Wohnhaus leben meistens viele Menschen. Die Menschen wollen friedlich miteinander wohnen. Dafür gibt es eine Hausordnung. In der Hausordnung steht, was man tun darf und was nicht.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🏢🤝📋 Friedlich wohnen",
+      short_question: "In der {Hausordnung} steht, {was man tun darf und was nicht}.",
+      keywords: { "Hausordnung": "House rules", "was man tun darf": "what you are allowed to do" },
+      signal_words: ["Hausordnung", "was man tun darf"],
+      coach_tip_en: "True! House rules ensure everyone in the building can live together peacefully."
+    }
+  },
+  {
+    id: "living_9",
+    category_id: "living",
+    base_question_id: "living_9",
+    points: 3,
+    official_text: {
+      question: "Darf eine Person im Stiegenhaus eines Wohnhauses rauchen?",
+      options: [
+        { id: "a", text: "Ja." },
+        { id: "b", text: "Nur am Wochenende." },
+        { id: "c", text: "Das steht in der Hausordnung." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "🚬🏢 ➔ 📋 Hausordnung",
+      short_question: "Darf man im {Stiegenhaus rauchen}?",
+      keywords: { "Stiegenhaus": "Stairwell / hallway (Austrian word!)", "rauchen": "smoke" },
+      signal_words: ["Stiegenhaus", "rauchen", "Hausordnung"],
+      coach_tip_en: "Note the Austrian word 'Stiegenhaus' = stairwell! Rules for common areas are in the Hausordnung."
+    }
+  },
+  {
+    id: "living_9_1",
+    category_id: "living",
+    base_question_id: "living_9",
+    points: 3,
+    official_text: {
+      question: "Dürfen Schuhe im Stiegenhaus eines Wohnhauses stehen?",
+      options: [
+        { id: "a", text: "Ja." },
+        { id: "b", text: "Nur am Wochenende." },
+        { id: "c", text: "Das steht in der Hausordnung." }
+      ],
+      correct_option: "c"
+    },
+    learning_aids: {
+      visual_anchor: "👟🏢 ➔ 📋 Hausordnung",
+      short_question: "Dürfen {Schuhe im Stiegenhaus} stehen?",
+      keywords: { "Schuhe": "Shoes", "Stiegenhaus": "Stairwell / hallway" },
+      signal_words: ["Schuhe", "Stiegenhaus", "Hausordnung"],
+      coach_tip_en: "Leaving shoes in the hallway is often restricted for fire safety—check the Hausordnung!"
+    }
+  },
+  {
+    id: "living_10",
+    category_id: "living",
+    base_question_id: "living_10",
+    points: 2,
+    official_text: {
+      question: "Man darf Müll überall hinwerfen.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "b"
+    },
+    learning_aids: {
+      visual_anchor: "🗑️❌ Nicht überall!",
+      short_question: "Man darf {Müll überall hinwerfen}.",
+      keywords: { "Müll": "Trash / garbage", "überall hinwerfen": "throw everywhere" },
+      signal_words: ["Müll überall"],
+      coach_tip_en: "False! Littering is forbidden in Austria—use trash bins."
+    }
+  },
+  {
+    id: "living_10_1",
+    category_id: "living",
+    base_question_id: "living_10",
+    points: 2,
+    official_text: {
+      question: "Man soll keinen Müll auf die Straße werfen.",
+      options: [
+        { id: "a", text: "richtig" },
+        { id: "b", text: "falsch" }
+      ],
+      correct_option: "a"
+    },
+    learning_aids: {
+      visual_anchor: "🛣️🗑️✅ Saubere Straße",
+      short_question: "Man soll {keinen Müll auf die Straße} werfen.",
+      keywords: { "keinen Müll": "no trash", "Straße": "street" },
+      signal_words: ["keinen Müll", "Straße"],
+      coach_tip_en: "True! Keep streets clean and never litter."
+    }
+  },
+  {
+    id: "living_11",
+    category_id: "living",
+    base_question_id: "living_11",
+    points: 2,
+    official_text: {question: "Eine Person stellt einen alten Kühlschrank in den Wald. Die Polizei sieht das. Die Polizei will, dass die Person den Kühlschrank wegräumt und eine Strafe bezahlt. Ist das in Ordnung?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🌲❄️❌ ➔ 🚓💸 Strafe",
+short_question: "Jemand stellt einen {Kühlschrank in den Wald} und bekommt eine {Strafe}. Ist das in Ordnung?",
+keywords: { "Kühlschrank": "Refrigerator", "Wald": "Forest", "Strafe": "Fine" },
+signal_words: ["Kühlschrank", "Wald", "Strafe"],
+coach_tip_en: "Yes! Illegal dumping in nature is heavily fined. Old appliances go to the recycling center (Mistplatz)."
+}
+},
+{
+id: "living_12",
+category_id: "living",
+base_question_id: "living_12",
+points: 2,
+official_text: {
+question: "Ein Mann möchte im Bus rauchen. Ist das erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🚌🚭 Rauchverbot",
+short_question: "Darf man {im Bus rauchen}?",
+keywords: { "im Bus rauchen": "smoke on the bus" },
+signal_words: ["Bus", "rauchen", "erlaubt"],
+coach_tip_en: "No! Smoking is strictly prohibited on all public transport."
+}
+},
+{
+id: "living_13",
+category_id: "living",
+base_question_id: "living_13",
+points: 2,
+official_text: {
+question: "Glas und Papier darf man in die Mülltonne für Altpapier werfen.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🍾❌ ➔ 📄 Altpapier",
+short_question: "{Glas und Papier} darf man zusammen in die {Altpapier-Tonne} werfen.",
+keywords: { "Glas": "Glass", "Altpapier-Tonne": "Paper recycling bin" },
+signal_words: ["Glas und Papier", "Altpapier"],
+coach_tip_en: "False! Glass goes into separate glass containers—never into the paper bin (Altpapier)."
+}
+},
+{
+id: "living_13_1",
+category_id: "living",
+base_question_id: "living_13",
+points: 2,
+official_text: {
+question: "Dosen darf man zum Restmüll werfen.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🥫❌ ➔ 🗑️ Restmüll",
+short_question: "{Dosen} darf man zum {Restmüll} werfen.",
+keywords: { "Dosen": "Metal cans", "Restmüll": "General / residual waste" },
+signal_words: ["Dosen", "Restmüll"],
+coach_tip_en: "False! Metal cans (Dosen) are recycled separately in the yellow bin/bag (Gelbe Tonne / Gelber Sack)."
+}
+},
+{
+id: "living_14",
+category_id: "living",
+base_question_id: "living_14",
+points: 2,
+official_text: {
+question: "Man soll ein altes Radio nicht in den Hausmüll werfen.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "📻❌ Hausmüll (Elektroschrott)",
+short_question: "Man soll ein {altes Radio nicht} in den {Hausmüll} werfen.",
+keywords: { "altes Radio": "old radio (e-waste)", "Hausmüll": "regular household trash" },
+signal_words: ["altes Radio", "nicht in den Hausmüll"],
+coach_tip_en: "True! Electronics (Elektroschrott) must be taken to a recycling center, not regular trash."
+}
+},
+{
+id: "living_15",
+category_id: "living",
+base_question_id: "living_15",
+points: 2,
+official_text: {
+question: "Ich brauche mein altes Fahrrad nicht mehr. Ich lasse es im Stiegenhaus stehen. Ist das erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "🚲❌ Stiegenhaus",
+short_question: "Darf man ein {altes Fahrrad im Stiegenhaus} stehen lassen?",
+keywords: { "altes Fahrrad": "old bicycle", "Stiegenhaus": "stairwell / hallway" },
+signal_words: ["Fahrrad", "Stiegenhaus", "erlaubt"],
+coach_tip_en: "No! Stairwells must stay clear for safety and fire exits."
+}
+},
+{
+id: "living_16",
+category_id: "living",
+base_question_id: "living_16",
+points: 2,
+official_text: {
+question: "Ich habe einen alten Computer. Ich brauche ihn nicht mehr. Ich werfe den Computer in die Mülltonne von unserem Haus. Ist das erlaubt?",
+options: [
+{ id: "a", text: "ja" },
+{ id: "b", text: "nein" }
+],
+correct_option: "b"
+},
+learning_aids: {
+visual_anchor: "💻❌ Haus-Mülltonne",
+short_question: "Darf man einen {alten Computer} in die {Haus-Mülltonne} werfen?",
+keywords: { "alten Computer": "old computer", "Mülltonne": "trash bin" },
+signal_words: ["Computer", "Mülltonne", "erlaubt"],
+coach_tip_en: "No! Computers are e-waste (Elektroschrott) and belong at a recycling facility."
+}
+},
+{
+id: "living_17",
+category_id: "living",
+base_question_id: "living_17",
+points: 2,
+official_text: {
+question: "Mülltrennung ist in Österreich wichtig. Man macht zum Beispiel aus alten Zeitungen wieder neues Papier.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "♻️📰 ➔ 📄 Mülltrennung",
+short_question: "{Mülltrennung} ist wichtig: Aus alten Zeitungen wird {neues Papier}.",
+keywords: { "Mülltrennung": "Waste separation / recycling" },
+signal_words: ["Mülltrennung", "neues Papier"],
+coach_tip_en: "True! Recycling (Mülltrennung) is a big priority in Austria."
+}
+},
+{
+id: "living_18",
+category_id: "living",
+base_question_id: "living_18",
+points: 2,
+official_text: {
+question: "Die Natur ist den Österreichern und Österreicherinnen sehr wichtig. Alle Menschen sollen in Österreich helfen, dass die Wälder, Wiesen, Berge und Flüsse sauber bleiben.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🏔️🌲🌊 Natur sauber halten",
+short_question: "Alle sollen helfen, dass {Wälder, Berge und Flüsse sauber} bleiben.",
+keywords: { "Wälder": "forests", "Berge": "mountains", "Flüsse": "rivers" },
+signal_words: ["Natur", "sauber bleiben"],
+coach_tip_en: "True! Protecting Austria's nature, mountains, and rivers is everyone's responsibility."
+}
+},
+{
+id: "living_19",
+category_id: "living",
+base_question_id: "living_19",
+points: 2,
+official_text: {
+question: "Eine Frau steigt mit dem Kind in die Straßenbahn ein. Eine andere Person bietet ihr den Platz an. Das ist sehr höflich.",
+options: [
+{ id: "a", text: "richtig" },
+{ id: "b", text: "falsch" }
+],
+correct_option: "a"
+},
+learning_aids: {
+visual_anchor: "🚋💺🤝 Höflichkeit",
+short_question: "Einer Frau mit Kind in der {Straßenbahn} den {Platz anbieten} ist {höflich}.",
+keywords: { "Straßenbahn": "Tram / streetcar", "Platz anbieten": "offer a seat", "höflich": "polite" },
+signal_words: ["Straßenbahn", "Platz", "höflich"],
+coach_tip_en: "True! Offering your seat to parents with small children, pregnant women, or elderly people is good manners."
+}
 }
   ]

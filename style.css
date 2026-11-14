@@ -141,14 +141,14 @@ h2 {
 .btn-primary {
   width: 100%;
   background: var(--green);
-  color: white;
+  color: green;
   border: none;
   padding: 16px;
   font-size: 1.05rem;
   font-weight: 800;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 0 #15803d;
+  box-shadow: 0 4px 0 #0f5f2d;
   transition: transform 0.1s;
 }
 
